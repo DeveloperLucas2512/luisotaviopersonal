@@ -1,0 +1,86 @@
+.presentation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Permite que o layout seja responsivo */
+}
+
+.text-container {
+  flex: 1;
+  margin-right: 20px;
+  border: 2px solid #007bff; /* Cor da borda */
+  border-radius: 10px; /* Arredondando as bordas */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  background-color: white; /* Fundo branco */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 300px; /* Limite máximo da largura da imagem */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Arredondando as bordas da imagem */
+}
+
+.schedule-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.schedule-button:hover {
+  background-color: #0056b3;
+}
+
+/* Novas regras para a linha de imagens */
+.images-row {
+  display: flex;
+  justify-content: space-between; /* Espaçamento uniforme entre as imagens */
+  margin: 20px 0; /* Espaço acima e abaixo da linha de imagens */
+  flex-wrap: wrap; /* Permite que as imagens se ajustem em telas menores */
+}
+
+.images-row img {
+  flex: 1 1 30%; /* Cada imagem ocupa cerca de 30% do espaço disponível */
+  margin: 5px; /* Espaçamento entre as imagens */
+  border-radius: 8px; /* Bordas arredondadas para as imagens */
+  max-width: 100%; /* As imagens não devem exceder a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column; /* Coloca os elementos em coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .text-container {
+    margin-right: 0; /* Remove a margem à direita em telas menores */
+    margin-bottom: 20px; /* Espaço entre o texto e a imagem */
+  }
+
+  .image-container {
+    max-width: 100%; /* Permite que a imagem use a largura total */
+  }
+
+  .images-row {
+    flex-direction: column; /* Coloca as imagens em coluna em telas menores */
+    align-items: center; /* Centraliza as imagens */
+  }
+
+  .images-row img {
+    width: 80%; /* Limita a largura das imagens em telas menores */
+    margin-bottom: 10px; /* Espaçamento abaixo das imagens */
+  }
+}

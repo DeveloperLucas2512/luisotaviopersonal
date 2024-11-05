@@ -1,0 +1,182 @@
+/* global.css */
+
+.logo-container {
+  width: 100%;
+  position: sticky; /* Mantém a logo fixa no topo */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 165px; /* Espaço para o logotipo */
+}
+
+.sticky-header {
+  background-color: #121212;
+  width: 100%;
+}
+
+.background-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85), #121212);
+  width: 100%;
+  height: 245px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(26, 115, 232);
+  height: 45px;
+  padding: 5px;
+}
+
+.header-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 800;
+  transition: color 0.3s ease;
+  font-size: 18px;
+  text-align: center;
+}
+
+.header-links a:hover {
+  color: #ffeb3b;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.page-content {
+  padding: 20px;
+}
+
+.cta {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.cta h1 {
+  color: #121212;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #ffeb3b;
+  color: #121212;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #121212;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 150px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: #1a73e8;
+}
+
+/*Section*/
+
+.presentation {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 20px 0;
+  flex-wrap: wrap; /* Permite que o layout seja responsivo */
+}
+
+.text-container {
+  flex: 1;
+  margin-right: 20px;
+  border: 2px solid #007bff; /* Cor da borda */
+  border-radius: 10px; /* Arredondando as bordas */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  background-color: white; /* Fundo branco */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 300px; /* Limite máximo da largura da imagem */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Arredondando as bordas da imagem */
+}
+
+.schedule-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px; /* Espaçamento acima do botão */
+}
+
+.schedule-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .presentation {
+    flex-direction: column; /* Coloca os elementos em coluna em telas menores */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .text-container {
+    margin-right: 0; /* Remove a margem à direita em telas menores */
+    margin-bottom: 20px; /* Espaço entre o texto e a imagem */
+  }
+
+  .image-container {
+    max-width: 100%; /* Permite que a imagem use a largura total */
+  }
+}
+
+/*Fim Section*/
